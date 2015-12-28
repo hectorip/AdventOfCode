@@ -18,6 +18,6 @@ defmodule ListasTest do
 
 
   test 'Testing with only ups' do
-    assert InstructionReader.render_result "((((" == 4
+    assert InstructionReader.render_result("((((") == 4
   end
 end

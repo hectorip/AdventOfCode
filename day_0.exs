@@ -20,4 +20,15 @@ defmodule ListasTest do
   test 'Testing with only ups' do
     assert InstructionReader.render_result("((((") == 4
   end
+  test 'Testting equal numbers of ups and downs' do
+    assert InstructionReader.render_result("(((())))") == 0
+  end
+
+  test 'Only downs' do
+    assert InstructionReader.render_result(")))))))))") == -9
+  end
+
+  test 'Combined' do
+    assert InstructionReader.render_result("(((())(()") == 3
+  end
 end

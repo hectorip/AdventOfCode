@@ -11,4 +11,13 @@ defmodule InstructionReader do
   end
 end
 
+ExUnit.start
 
+defmodule ListasTest do
+  use ExUnit.Case
+
+
+  test 'Testing with only ups' do
+    assert InstructionReader.render_result "((((" == 4
+  end
+end
